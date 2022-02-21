@@ -1,0 +1,54 @@
+
+public class Emp {
+
+	private String Ename;
+	private int Esal;
+	private String Eadd;
+	private int EpinCode;
+	
+	public String getEname() {
+		return Ename;
+	}
+	public void setEname(String Ename) {
+		this.Ename = Ename;
+	}
+	
+	public int getEsal() {
+		return Esal;
+	}
+	public void setEsal(int Esal) {
+		this.Esal = Esal;
+	}
+	
+	public String getEadd() {
+		return Eadd;
+	}
+	public void setEadd(String Eadd) {
+		this.Eadd = Eadd;
+	}
+	public int getEpinCode() {
+		return EpinCode;
+	}
+	public void setEpinCode(int EpinCode) {
+		this.EpinCode = EpinCode;
+	}
+//	public Emp() {
+//		
+//	}
+//	
+	public Emp(String Ename, int Esal,String Eadd,int EpinCode) {
+		super();
+		this.Ename=Ename;
+		this.Esal=Esal;
+		this.Eadd=Eadd;
+		this.EpinCode=EpinCode;
+		
+	}
+	@Override
+	public String toString() {
+		
+		return "Employ [Ename=" + getEname() + ", Esal=" + getEsal() + ", Eadd=" + getEadd() + ", EpinCode=" + getEpinCode()
+				+ "]";
+	
+}
+}

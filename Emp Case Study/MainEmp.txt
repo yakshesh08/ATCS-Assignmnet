@@ -1,0 +1,166 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class MainEmp{
+
+	public static void main(String[] args) {
+		HashMap<Integer,Emp> obj= new HashMap<Integer,Emp>();
+		int Eid=0;
+		
+		while(true) {
+			System.out.println("Employ Management System");
+			System.out.println("Press 1 for Add Employ Details");
+			System.out.println("Press 2 for Update Employ Details");
+			System.out.println("Press 3 for Get Employ Details");
+			System.out.println("Press 4 for Delete Details");
+		
+			Scanner sc= new Scanner(System.in);
+			
+			int c= sc.nextInt();
+			
+			switch(c) {
+			case 1: 
+				System.out.println("Enter name of Employ ");
+				String Ename= sc.next();
+				
+				System.out.println("Enter Salary of Employ");
+				int Esal = sc.nextInt();
+				
+				System.out.println("Enter the Address of Employ");
+				String Eadd= sc.next();
+				
+				System.out.println("Enter the Pin Code");
+				int EpinCode = sc.nextInt();
+				
+				Emp ed= new Emp(Ename,Esal,Eadd,EpinCode);
+				obj.put(++Eid,ed);
+				
+				System.out.println("Employ Details Added Successfully:"+Eid);
+				break;
+				
+			case 2:
+				System.out.println("Enter ID to Update");
+				int Eid1= sc.nextInt();
+				
+				System.out.println("Enter name of Employ ");
+				String Ename1= sc.next();
+				
+				System.out.println("Enter Salary of Employ");
+				int Esal1 = sc.nextInt();
+				
+				System.out.println("Enter the Address of Employ");
+				String Eadd1= sc.next();
+				
+				System.out.println("Enter the Pin Code");
+				int EpinCode1 = sc.nextInt();
+				
+				Emp ed1= new Emp(Ename1,Esal1,Eadd1,EpinCode1);
+				
+				obj.put(Eid1, ed1);
+				
+				System.out.println("Product has been updated successfully:"+Eid1);
+				break;
+				
+			case 3:
+				System.out.println("Enter ID to get Detail of Employe");
+				int Eid2=sc.nextInt();
+				
+				//Emp eobj= obj.get(Eid2);
+				System.out.println(obj.get(Eid2));
+				break;
+				
+			case 4:
+				System.out.println("Enter id to delete Product");
+				int Eid3 = sc.nextInt();
+				
+				Emp eobj = obj.remove(Eid3);
+				System.out.println("Detailed Deleted:"+Eid3);
+				
+				break;
+				
+				
+			default:
+				System.out.println("Wrong Press");
+				
+			}
+		
+		
+		
+		}
+		
+	}
+}
+
+/*
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+1
+Enter name of Employ 
+Yakshesh
+Enter Salary of Employ
+10000
+Enter the Address of Employ
+malviyanagar
+Enter the Pin Code
+302017
+Employ Details Added Successfully:1
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+1
+Enter name of Employ 
+uuuu
+Enter Salary of Employ
+888
+Enter the Address of Employ
+iuhiuh
+Enter the Pin Code
+90909
+Employ Details Added Successfully:2
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+2
+Enter ID to Update
+2
+Enter name of Employ 
+yyyuuu
+Enter Salary of Employ
+8778676
+Enter the Address of Employ
+hguyg
+Enter the Pin Code
+98987
+Product has been updated successfully:2
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+4
+Enter id to delete Product
+1
+Detailed Deleted:1
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+3
+Enter ID to get Detail of Employe
+2
+Employ [Ename=yyyuuu, Esal=8778676, Eadd=hguyg, EpinCode=98987]
+Employ Management System
+Press 1 for Add Employ Details
+Press 2 for Update Employ Details
+Press 3 for Get Employ Details
+Press 4 for Delete Details
+
+*/
